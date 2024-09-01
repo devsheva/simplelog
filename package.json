@@ -1,7 +1,6 @@
 {
 	"name": "simplelog",
 	"description": "A simple logging library",
-	"version": "0.1.0",
 	"devDependencies": {
 		"nodemon": "^3.1.4",
 		"prettier": "3.3.3",
@@ -13,6 +12,7 @@
 		"start": "pnpm ts-node src/index.ts",
 		"dev": "pnpm nodemon src/index.ts",
 		"build": "tsc",
-		"test": "vitest"
+		"test": "vitest",
+		"coverage": "vitest run --coverage"
 	}
 }
