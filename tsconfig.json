@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "NodeNext",
+        "strict": true,
+        "noEmitOnError": true
+    },
+    "include": [
+        "src/**/*.ts",
+    ]
+}
