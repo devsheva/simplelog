@@ -5,6 +5,7 @@
 		"vitest": "^2.0.5"
 	},
 	"scripts": {
+		"start": "pnpm ts-node src/index.ts",
 		"build": "tsc",
 		"test": "vitest"
 	}
