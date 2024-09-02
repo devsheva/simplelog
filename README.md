@@ -1,6 +1,6 @@
 # simplelog
 
-![develop](https://github.com/devsheva/simplelog/.github/workflows/qa.yml/badge.svg?branch=develop)
-[![codecov](https://codecov.io/gh/devsheva/simplelog/graph/badge.svg?token=JGWnEu7EOI)](https://codecov.io/gh/devsheva/simplelog)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/devsheva/simplelog/qa.yml)
+![Codecov](https://img.shields.io/codecov/c/github/devsheva/simplelog)
 
 A simple logger decorator amplify like
