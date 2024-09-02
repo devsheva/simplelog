@@ -6,5 +6,7 @@
   "baseBranches": ["$default", "develop"],
   "major": {
     "dependencyDashboardApproval": true
-  }
+  },
+  "schedule": ["after 10pm every weekday", "before 5am every weekday"],
+  "updateNotScheduled": true
 }
