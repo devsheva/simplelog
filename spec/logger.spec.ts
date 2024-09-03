@@ -1,6 +1,11 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, expectTypeOf, it, vi } from 'vitest'
 import Base from '../src/base.js'
-import { loggerDecorator } from '../src/logger.js'
+import {
+  getLogLevel,
+  loggerDecorator,
+  LogLevel,
+  LogLevelStrings
+} from '../src/logger.js'
 
 describe('logger', () => {
   it('has a logger property', () => {
@@ -39,4 +44,56 @@ describe('logger', () => {
       })
     })
   })
+
+  describe('logLevels', () => {
+    it.each(['verbose', 'debug', 'info', 'warn', 'error'])(
+      `has a %s method`,
+      (level) => {
+        class Test extends Base {}
+        loggerDecorator()(Test)
+        const instance = new Test()
+        expect(instance.logger).toHaveProperty(level)
+        expect(instance.logger[level]).toBeInstanceOf(Function)
+      }
+    )
+
+    it('should log a message at the specified level', () => {
+      class Test extends Base {
+        hello() {
+          this.logger.debug('hello')
+        }
+      }
+
+      loggerDecorator('test', { level: 'debug' })(Test)
+      const testInstance = new Test()
+      const consoleSpy = vi.spyOn(console, 'debug')
+      testInstance.hello()
+      expect(consoleSpy).toHaveBeenCalledOnce()
+    })
+
+    it('should not log a message at a lower level', () => {
+      class Test extends Base {
+        hello() {
+          this.logger.debug('hello')
+        }
+      }
+
+      loggerDecorator('test', { level: 'error' })(Test)
+      const testInstance = new Test()
+      const consoleSpy = vi.spyOn(console, 'debug')
+      testInstance.hello()
+      expect(consoleSpy).not.toHaveBeenCalled()
+    })
+  })
+})
+
+describe('getLogLevel', () => {
+  it.each(['verbose', 'debug', 'info', 'warn', 'error'])(
+    'returns the correct log level for %s',
+    (level) => {
+      expect(getLogLevel(level as LogLevelStrings)).toBe(
+        LogLevel[level.toUpperCase() as keyof typeof LogLevel]
+      )
+    }
+  )
 })

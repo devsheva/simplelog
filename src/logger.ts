@@ -30,6 +30,29 @@ function Logger(
       level: options.level
     }
 
+    Object.assign(logger, {
+      verbose(...args: any[]) {
+        if (getLogLevel(logger.level) <= LogLevel.VERBOSE)
+          console.log(`[${name}] - `, ...args)
+      },
+      debug(...args: any[]) {
+        if (getLogLevel(logger.level) <= LogLevel.DEBUG)
+          console.debug(`[${name}] - `, ...args)
+      },
+      info(...args: any[]) {
+        if (getLogLevel(logger.level) <= LogLevel.INFO)
+          console.info(`[${name}] - `, ...args)
+      },
+      warn(...args: any[]) {
+        if (getLogLevel(logger.level) <= LogLevel.WARN)
+          console.warn(`[${name}] - `, ...args)
+      },
+      error(...args: any[]) {
+        if (getLogLevel(logger.level) <= LogLevel.ERROR)
+          console.error(`[${name}] - `, ...args)
+      }
+    })
+
     Object.defineProperty(target.prototype, 'logger', {
       value: logger
     })
@@ -39,4 +62,5 @@ function Logger(
 const loggerDecorator = Logger
 
 export default Logger
-export { LogLevel, loggerDecorator }
+export { LogLevel, loggerDecorator, getLogLevel }
+export type { LogLevelStrings }
