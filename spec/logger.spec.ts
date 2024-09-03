@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import Base from '../src/base'
-import { loggerDecorator } from '../src/logger'
+import Base from '../src/base.js'
+import { loggerDecorator } from '../src/logger.js'
 
 describe('logger', () => {
   it('has a logger property', () => {
