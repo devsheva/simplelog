@@ -1,5 +1,5 @@
 import { describe, expect, expectTypeOf, it, vi } from 'vitest'
-import Base from '../src/base.js'
+
 import {
   getLogLevel,
   loggerDecorator,
@@ -9,19 +9,28 @@ import {
 
 describe('logger', () => {
   it('has a logger property', () => {
-    class Test extends Base {}
+    interface Test {
+      logger: any
+    }
+    class Test {}
     loggerDecorator()(Test)
 
     expect(Test.prototype).toHaveProperty('logger')
   })
 
   it('overrides name if not provided', () => {
-    class Test extends Base {}
+    interface Test {
+      logger: any
+    }
+    class Test {}
     loggerDecorator()(Test)
   })
 
   it('sets name if provided', () => {
-    class Test extends Base {}
+    interface Test {
+      logger: any
+    }
+    class Test {}
     loggerDecorator('test')(Test)
     const instance = new Test()
     expect(instance.logger).toHaveProperty('name', 'test')
@@ -30,14 +39,20 @@ describe('logger', () => {
   describe('options', () => {
     describe('level', () => {
       it('defaults to info', () => {
-        class Test extends Base {}
+        interface Test {
+          logger: any
+        }
+        class Test {}
         loggerDecorator()(Test)
         const instance = new Test()
         expect(instance.logger).toHaveProperty('level', 'info')
       })
 
       it('can be overridden', () => {
-        class Test extends Base {}
+        interface Test {
+          logger: any
+        }
+        class Test {}
         loggerDecorator('', { level: 'debug' })(Test)
         const instance = new Test()
         expect(instance.logger).toHaveProperty('level', 'debug')
@@ -49,7 +64,10 @@ describe('logger', () => {
     it.each(['verbose', 'debug', 'info', 'warn', 'error'])(
       `has a %s method`,
       (level) => {
-        class Test extends Base {}
+        interface Test {
+          logger: any
+        }
+        class Test {}
         loggerDecorator()(Test)
         const instance = new Test()
         expect(instance.logger).toHaveProperty(level)
@@ -58,7 +76,10 @@ describe('logger', () => {
     )
 
     it('should log a message at the specified level', () => {
-      class Test extends Base {
+      interface Test {
+        logger: any
+      }
+      class Test {
         hello() {
           this.logger.debug('hello')
         }
@@ -72,7 +93,10 @@ describe('logger', () => {
     })
 
     it('should not log a message at a lower level', () => {
-      class Test extends Base {
+      interface Test {
+        logger: any
+      }
+      class Test {
         hello() {
           this.logger.debug('hello')
         }

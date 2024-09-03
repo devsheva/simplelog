@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.0] - 2024-09-03
 
 ### 🚀 Features
 
@@ -11,6 +11,11 @@ All notable changes to this project will be documented in this file.
 - *(logger)* Add base class with logger property
 - *(logger)* Add name and level property
 - *(logger)* Add log method for all levels
+- Add changelog with git-cliff
+
+### 🐛 Bug Fixes
+
+- [**breaking**] Remove base class since it was causing runtime error
 
 ### 🚜 Refactor
 
@@ -19,6 +24,7 @@ All notable changes to this project will be documented in this file.
 ### 📚 Documentation
 
 - Use shields.io for badges
+- Add instructions on how to temporary type a property added by a decorator
 
 ### 🧪 Testing
 
