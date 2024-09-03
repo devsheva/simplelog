@@ -1,7 +1,19 @@
-type LogLevel = 'verbose' | 'debug' | 'info' | 'warn' | 'error'
+enum LogLevel {
+  VERBOSE = 0,
+  DEBUG,
+  INFO,
+  WARN,
+  ERROR
+}
+
+type LogLevelStrings = Lowercase<keyof typeof LogLevel>
 
 type LoggerOptions = {
-  level: LogLevel
+  level: LogLevelStrings
+}
+
+function getLogLevel(level: LogLevelStrings): LogLevel {
+  return LogLevel[level.toUpperCase() as keyof typeof LogLevel]
 }
 
 function Logger(
