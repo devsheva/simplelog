@@ -1,7 +1,7 @@
 type LogLevel = 'verbose' | 'debug' | 'info' | 'warn' | 'error'
 
 type LoggerOptions = {
-  level?: LogLevel
+  level: LogLevel
 }
 
 function Logger(

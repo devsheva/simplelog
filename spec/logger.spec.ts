@@ -15,6 +15,13 @@ describe('logger', () => {
     loggerDecorator()(Test)
   })
 
+  it('sets name if provided', () => {
+    class Test extends Base {}
+    loggerDecorator('test')(Test)
+    const instance = new Test()
+    expect(instance.logger).toHaveProperty('name', 'test')
+  })
+
   describe('options', () => {
     describe('level', () => {
       it('defaults to info', () => {

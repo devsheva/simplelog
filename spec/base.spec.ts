@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import Base from '../src/base.ts'
+import Base from '../src/base.js'
 
 describe('base', () => {
   it('has a logger property', () => {
