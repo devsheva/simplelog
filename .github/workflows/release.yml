@@ -19,11 +19,12 @@ jobs:
         with:
           node-version-file: '.tool-versions'
           cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: pnpm install
       - name: Build
         run: pnpm build
       - name: Publish
-        run: npm publish
+        run: npm publish --access public
         env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
