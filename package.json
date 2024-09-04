@@ -7,6 +7,7 @@
 		"url": "https://github.com/devsheva"
 	},
 	"main": "dist/logger.js",
+	"types": "dist/logger.d.ts",
 	"description": "A simple logging library",
 	"devDependencies": {
 		"@vitest/coverage-v8": "^2.0.5",
