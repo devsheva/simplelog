@@ -19,6 +19,10 @@
 		"typescript": "^5.5.4",
 		"vitest": "^2.0.5"
 	},
+	"files": [
+		"dist",
+		"src"
+	],
 	"scripts": {
 		"start": "pnpm tsx src/index.ts",
 		"dev": "pnpm tsx watch src/index.ts",
