@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2024-09-04
+
+### 🚀 Features
+
+- Add release workflow to publish on npm
+
+### 📚 Documentation
+
+- Replace gh release badge with npm
+- Wrap npm and codecov badges with href
+- Add contributing section
+- Add usage instructions
+
+### ⚙️ Miscellaneous Tasks
+
+- *(release)* Add missing build step
+- Add GH release badge
+- *(release)* Add missing registry-url variable for node action
+
 ## [0.1.1] - 2024-09-04
 
 ### 🚀 Features
