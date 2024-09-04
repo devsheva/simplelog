@@ -1,6 +1,7 @@
 {
 	"name": "simplelog-decorator",
 	"version": "0.1.0",
+	"license": "MIT",
 	"type": "module",
 	"author": {
 		"email": "sheshi.mateo01@gmail.com",
