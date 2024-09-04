@@ -1,6 +1,6 @@
 {
 	"name": "simplelog-decorator",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"type": "module",
 	"author": {
@@ -19,6 +19,15 @@
 		"typescript": "^5.5.4",
 		"vitest": "^2.0.5"
 	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"keywords": [
+		"typescript",
+		"nodejs",
+		"decorators"
+	],
 	"scripts": {
 		"start": "pnpm tsx src/index.ts",
 		"dev": "pnpm tsx watch src/index.ts",
