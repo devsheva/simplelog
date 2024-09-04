@@ -21,3 +21,9 @@ class Example {
    }
 }
 ```
+
+## Contributing
+
+This has been developed as a personal project, in order to be able to have an amplify-like logger as a package, without needing to install the whole amplify lib for just logging features.
+
+But feel free to contribute by forking this project and opening a PR once done.
