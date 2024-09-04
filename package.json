@@ -23,6 +23,11 @@
 		"dist",
 		"src"
 	],
+	"keywords": [
+		"typescript",
+		"nodejs",
+		"decorators"
+	],
 	"scripts": {
 		"start": "pnpm tsx src/index.ts",
 		"dev": "pnpm tsx watch src/index.ts",
