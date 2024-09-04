@@ -1,5 +1,6 @@
 {
-	"name": "simplelog",
+	"name": "simplelog-decorator",
+	"version": "0.1.0",
 	"type": "module",
 	"author": {
 		"email": "sheshi.mateo01@gmail.com",
