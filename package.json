@@ -1,6 +1,11 @@
 {
 	"name": "simplelog",
 	"type": "module",
+	"author": {
+		"email": "sheshi.mateo01@gmail.com",
+		"name": "Mateo Sheshi",
+		"url": "https://github.com/devsheva"
+	},
 	"description": "A simple logging library",
 	"devDependencies": {
 		"@vitest/coverage-v8": "^2.0.5",
