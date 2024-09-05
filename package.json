@@ -8,6 +8,10 @@
 		"name": "Mateo Sheshi",
 		"url": "https://github.com/devsheva"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devsheva/simplelog"
+	},
 	"main": "dist/logger.js",
 	"types": "dist/logger.d.ts",
 	"description": "A simple logging library",
