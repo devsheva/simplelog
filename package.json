@@ -1,12 +1,16 @@
 {
 	"name": "simplelog-decorator",
-	"version": "0.1.2",
+	"version": "0.1.4",
 	"license": "MIT",
 	"type": "module",
 	"author": {
 		"email": "sheshi.mateo01@gmail.com",
 		"name": "Mateo Sheshi",
 		"url": "https://github.com/devsheva"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devsheva/simplelog"
 	},
 	"main": "dist/logger.js",
 	"types": "dist/logger.d.ts",
@@ -20,8 +24,7 @@
 		"vitest": "^2.0.5"
 	},
 	"files": [
-		"dist",
-		"src"
+		"dist"
 	],
 	"keywords": [
 		"typescript",
