@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2024-09-06
+
+### ⚙️ Miscellaneous Tasks
+
+- Add repo section
+- Remove src folder on npm
+
+### Release
+
+- Bump to 0.1.4
+
 ## [0.1.2] - 2024-09-04
 
 ### 🚀 Features
