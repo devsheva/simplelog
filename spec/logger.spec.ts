@@ -75,22 +75,28 @@ describe('logger', () => {
       }
     )
 
-    it('should log a message at the specified level', () => {
-      interface Test {
-        logger: any
-      }
-      class Test {
-        hello() {
-          this.logger.debug('hello')
+    it.each(['verbose', 'debug', 'info', 'warn', 'error'])(
+      'should log a message at the specified level',
+      (level) => {
+        interface Test {
+          logger: any
         }
-      }
+        class Test {
+          hello() {
+            this.logger[level]('hello')
+          }
+        }
 
-      loggerDecorator('test', { level: 'debug' })(Test)
-      const testInstance = new Test()
-      const consoleSpy = vi.spyOn(console, 'debug')
-      testInstance.hello()
-      expect(consoleSpy).toHaveBeenCalledOnce()
-    })
+        loggerDecorator('test', { level: level as any })(Test)
+        const testInstance = new Test()
+
+        let consoleSpy
+        if (level === 'verbose') consoleSpy = vi.spyOn(console, 'log')
+        else consoleSpy = vi.spyOn(console, level as any)
+        testInstance.hello()
+        expect(consoleSpy).toHaveBeenCalledOnce()
+      }
+    )
 
     it('should not log a message at a lower level', () => {
       interface Test {
