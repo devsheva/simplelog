@@ -2,11 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.5] - 2024-09-14
+
+### 📚 Documentation
+
+- *(badges)* Add monthly npm downloads
 
 ### 🧪 Testing
 
 - Ensure if constructs are executing right to reach coverage of 100%
+
+### ⚙️ Miscellaneous Tasks
+
+- *(git-cliff)* Skip changelog bump parsing
+- Bump package to 0.1.5
 
 ## [0.1.4] - 2024-09-06
 
