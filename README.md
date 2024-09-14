@@ -2,6 +2,7 @@
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/devsheva/simplelog/qa.yml)
 [![NPM Version](https://img.shields.io/npm/v/simplelog-decorator)](https://www.npmjs.com/package/simplelog-decorator)
+![NPM Downloads](https://img.shields.io/npm/dm/simplelog-decorator?style=plastic)
 [![Codecov](https://img.shields.io/codecov/c/github/devsheva/simplelog)](https://app.codecov.io/github/devsheva/simplelog)
 
 A simple logger built as class decorator, amplify like.
