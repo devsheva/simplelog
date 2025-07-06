@@ -16,12 +16,12 @@
 	"types": "dist/logger.d.ts",
 	"description": "A simple logging library",
 	"devDependencies": {
-		"@vitest/coverage-v8": "^2.0.5",
+		"@vitest/coverage-v8": "^3.0.0",
 		"nodemon": "^3.1.4",
 		"prettier": "3.6.2",
 		"tsx": "^4.19.0",
 		"typescript": "^5.5.4",
-		"vitest": "^2.0.5"
+		"vitest": "^3.0.0"
 	},
 	"files": [
 		"dist"
